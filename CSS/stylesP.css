@@ -1,0 +1,363 @@
+body {
+    margin: 0;
+}
+
+/* ------------ CSS PARA LOS BARRA DE HASTA ARRIBA ------------ */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-bottom: px solid;
+    background: aliceblue;
+    align-items: center;
+}
+.menu {
+    display: none;
+    width: 40px;
+    height: 40px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 25px;
+}
+.navbar-left ul, .navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.navbar-left {
+    display: flex;
+}
+.navbar-left ul {
+    display: flex;
+    margin-left: 20px;
+}
+.navbar-left ul li a, .navbar-right ul li a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid aliceblue;
+    padding: 10px;
+    border-radius: 8px;
+}
+.navbar-left ul li a:hover, .navbar-right ul li a:hover{
+    text-decoration: none;
+    color: red;
+    border: 1px solid red;
+    color: black;
+}
+.navbar-email {
+    color: black;
+    font-size: 16px;
+    margin-right: 12px;
+}
+.navbar-shopping-car {
+    position: relative; 
+}
+
+.navbar-shopping-car div{
+    width: 14px;
+    height: 14px;
+    background-color:greenyellow;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.icono-carro-nav {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 640px){
+    .menu{
+        display: block;
+    }
+    .navbar-left ul {
+        display: none;
+    }
+    .navbar-email {
+        display: none;
+    }
+}
+
+/* ------------ CSS PARA LOS PRODUCTOS ------------ */
+.laptops-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 275px);
+    gap: 50px;
+    place-content: center;
+}
+
+.producto-laptos {
+    width: 250px;
+}
+
+.producto-laptos img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.info-laptop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.info-laptop figure {
+    margin: 0;
+}
+
+.producto-laptos div p:nth-child(1){
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+.producto-laptos div p:nth-child(2){
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 6px;
+    color: gray;
+}
+
+.producto-laptos div p:nth-child(3){
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 6px;
+    color: red;
+}
+.info-laptop figure img {
+    width: 50px;
+    height: 50px;
+}
+
+/* ------------ CSS PARA LOS INFORMACION CONTACTO ------------ */
+.information-general{
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+}
+
+.iconos-contacto{
+    padding: 0px;
+}
+
+.iconos-contacto p{ 
+    text-align: center;
+    font-weight: bold;
+}
+
+.iconos-redes img {
+    width: 35px;
+    height: 35px;
+    padding: 0px 20px;
+    place-items: center;
+}
+
+.information-general{
+    border: 1px;
+    background: aliceblue;
+}
+
+
+/*-- MODIFICAR EL TAMAñO CUANDO SE UTILICE TELEFONO --*/
+@media (max-width: 640px){
+    .laptops-container {
+        grid-template-columns: repeat(auto-fill, 150px);
+    }
+    
+    .producto-laptos {
+        width: 150px;
+    }
+    
+    .producto-laptos img {
+        width: 150px;
+        height: 150px;
+    }
+} 
+
+/* Estilos base para la imagen */
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Cambiar el cursor cuando se pasa sobre la imagen */
+.image-container:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+.cursor {
+    cursor: pointer; 
+}
+
+/* Confirmacion*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-confirmacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f7fa;
+}
+
+.confirmacion-compra {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #005f9e;
+}
+
+.productos-confirmados {
+    border-top: 1px solid #d3e4f8;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.producto-confirmado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.imagen-producto-confirmado {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #d3e4f8;
+}
+
+#total-confirmado {
+    font-weight: bold;
+    font-size: 20px;
+    color: #005f9e;
+}
+
+
+.boton-agregar,
+.boton-quitar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 35px; /* Ajusta este valor para controlar la separación */
+    border-radius: 4px;
+}
+
+.boton-quitar {
+    background-color: #dc3545;
+}
+
+.nombre-producto {
+    /*padding: 15px;*/
+    padding-right: 25px;
+}
+
+.precio-texto {
+    margin-right: 50px; /* Ajusta este valor según tu preferencia */
+}
+
+/* Opcional: Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .confirmacion-compra {
+        width: 90%;
+    }
+}
+
+
+/* -----    CSS PAGINA CONTACTO    -----*/
+
+.contacto{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.container-contacto{
+    display: grid;
+    grid-template-rows: auto 2fr auto;
+    width: 500px;
+}
+.title-contacto{
+    font-size: 35px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+.input {
+    background-color: gainsboro;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+.input-nombre, .input-email, .input-tel, .input-mensaje {
+    margin-bottom: 22px;
+    width: 500px;
+    height: 22px;
+}
+.input-mensaje {
+    text-align: left;
+    margin-bottom: 22px;
+    width: 500px;
+    height: 100px;
+}
+.form-contact{
+    display: flex;
+    flex-direction: column;
+}
+.form div {
+    display: flex;
+    flex-direction: column;
+}
+.primary-button {
+    background-color: royalblue;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+}
+.button-contacto{
+    margin-top: 14px;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,305 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------ CSS PARA LOS BARRA DE HASTA ARRIBA ------------ */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    border-bottom: px solid;
+    background: aliceblue;
+    align-items: center ;
+}
+.menu {
+    display: none;
+    width: 40px;
+    height: 40px;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 25px;
+}
+.navbar-left ul, .navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.navbar-left {
+    display: flex;
+}
+.navbar-left ul {
+    display: flex;
+    margin-left: 20px;
+}
+.navbar-left ul li a, .navbar-right ul li a{
+    text-decoration: none;
+    color: black;
+    border: 1px solid aliceblue;
+    padding: 10px;
+    border-radius: 8px;
+}
+.navbar-left ul li a:hover, .navbar-right ul li a:hover{
+    text-decoration: none;
+    color: red;
+    border: 1px solid red;
+    color: black;
+}
+.navbar-email {
+    color: black;
+    font-size: 16px;
+    margin-right: 12px;
+}
+.navbar-shopping-car {
+    position: relative; 
+}
+
+.navbar-shopping-car div{
+    width: 14px;
+    height: 14px;
+    background-color:greenyellow;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.icono-carro-nav {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 640px){
+    .menu{
+        display: block;
+    }
+    .navbar-left ul {
+        display: none;
+    }
+    .navbar-email {
+        display: none;
+    }
+}
+
+
+/* Resto de estilos... */
+
+.background-picture {
+    position: relative;
+    /* Permite posicionar elementos hijos de manera relativa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 1000px;
+    /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+    background-color: black;
+}
+
+.background-image {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+.image-overlay {
+    position: absolute;
+    /* Posición absoluta en relación con el contenedor */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(41, 37, 37, 0.5);
+    /* Fondo semitransparente */
+}
+
+.overlay-text {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+.team-heading {
+    font-size: 45px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.team-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: -20px;
+    /* Ajusta el valor según tus preferencias */
+}
+
+.team-image {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.team-image img {
+    max-width: 80%;
+    border-radius: 50%;
+    width: 400px;
+    height: 330px;
+}
+
+.about-us {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(200, 33, 33, 0.585); /* Sombras suaves */
+    text-align: center;
+    max-width: 1500px; /* Ajusta el ancho máximo del contenedor según tus preferencias */
+    margin: 0 auto; /* Centra horizontalmente el contenedor */
+    margin-top: 20px;
+}
+
+.about-heading {
+    color: #333;
+    font-size: 45px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.about-text {
+    color: #555;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.aside-image {
+    width: 450px; /* Ajusta el ancho deseado */
+    max-height: 500px; /* Altura máxima para mantener proporciones */
+    padding: 25px; /* Espacio dentro del cuadro de fondo */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Alinea el texto en la parte inferior */
+    text-align: center;
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+    border: 1px solid rgba(238, 0, 0, 0.8); /* Línea de margen con color */
+    border-radius: 6px;
+}
+
+.image {
+    margin: auto; /* Centra la imagen vertical y horizontalmente */
+    display: block; /* Asegura que la imagen sea un elemento de bloque */
+    max-width: 100%; /* Ajusta el ancho máximo para mantener proporciones */
+    max-height: 100%; /* Ajusta la altura máxima para mantener proporciones */
+}
+
+
+.aside-image p {
+    margin: 0; /* Elimina el margen del párrafo */
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+.ver-mas-button {
+    display: inline-block;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 30px;
+}
+
+@media (max-width: 640px){
+    .ver-mas-button {
+        display: inline-block;
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        padding: 10px 10px;
+        text-decoration: none;
+        margin-top: 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        font-size: 20px;
+    }
+    .aside-image {
+        width: 300px; /* Ajusta el ancho deseado */
+        max-height: 500px; /* Altura máxima para mantener proporciones */
+        padding: 25px; /* Espacio dentro del cuadro de fondo */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end; /* Alinea el texto en la parte inferior */
+        text-align: center;
+        overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+        border: 1px solid rgba(238, 0, 0, 0.8); /* Línea de margen con color */
+        border-radius: 6px;
+    }
+    .image-container {
+        display: grid;
+        grid-template-rows: auto;
+        margin: 20px;
+    }
+    .team-image img {
+        max-width: 80%;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+.ver-mas-button:hover {
+    background-color: red; /* Cambio de color de fondo al pasar el mouse */
+    color: #ffffff; /* Cambio de color del texto al pasar el mouse */
+}
+
+.video-section {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los videos */
+}
+
+.video-iframe {
+    width: calc(50% - 10px); /* Ancho del 50% menos el espacio entre los videos */
+    height: 315px; /* Altura fija de los videos */
+}
+
+.footer {
+    text-align: center;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-right: 25px;
+}
